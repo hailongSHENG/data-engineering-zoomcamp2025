@@ -25,6 +25,25 @@ What's the version of `pip` in the image?
 - 23.3.1
 - 23.2.1
 
+### ANSWER: 24.3.1
+```bash
+$ docker run -it python:3.12.8 bash
+3.12.8: Pulling from library/python
+fd0410a2d1ae: Already exists
+bf571be90f05: Already exists
+684a51896c82: Already exists
+fbf93b646d6b: Already exists
+12f3828c4288: Pull complete
+4d8be491b866: Pull complete
+ec162e081748: Pull complete
+Digest: sha256:2e726959b8df5cd9fd95a4cbd6dcd23d8a89e750e9c2c5dc077ba56365c6a925
+Status: Downloaded newer image for python:3.12.8
+^[root@f9d57e9ebda4:/# pip list
+Package Version
+------- -------
+pip     24.3.1
+root@f9d57e9ebda4:/#
+```
 
 ## Question 2. Understanding Docker networking and docker-compose
 
@@ -90,6 +109,8 @@ Download this data and put it into Postgres.
 You can use the code from the course. It's up to you whether
 you want to use Jupyter or a python script.
 
+### ANSWER: postgres:5432
+
 ## Question 3. Trip Segmentation Count
 
 During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive), how many trips, **respectively**, happened:
@@ -106,6 +127,8 @@ Answers:
 - 104,793;  201,407;  110,612;  27,831;  35,281
 - 104,793;  202,661;  109,603;  27,678;  35,189
 - 104,838;  199,013;  109,645;  27,688;  35,202
+  
+### ANSWER: 104,802;  198,924;  109,603;  27,678;  35,189
 
 
 ## Question 4. Longest trip for each day
@@ -120,7 +143,7 @@ Tip: For every day, we only care about one single trip with the longest distance
 - 2019-10-26
 - 2019-10-31
 
-
+### 2019-10-31
 ## Question 5. Three biggest pickup zones
 
 Which were the top pickup locations with over 13,000 in
@@ -133,7 +156,7 @@ Consider only `lpep_pickup_datetime` when filtering by date.
 - Morningside Heights, Astoria Park, East Harlem South
 - Bedford, East Harlem North, Astoria Park
 
-
+### ANSWER: East Harlem North, East Harlem South, Morningside Heights
 ## Question 6. Largest tip
 
 For the passengers picked up in October 2019 in the zone
@@ -160,6 +183,7 @@ Copy the files from the course repo
 
 Modify the files as necessary to create a GCP Bucket and Big Query Dataset.
 
+### ANSWER: JFK Airport
 
 ## Question 7. Terraform Workflow
 
@@ -175,7 +199,7 @@ Answers:
 - terraform init, terraform apply -auto-approve, terraform destroy
 - terraform import, terraform apply -y, terraform rm
 
-
+### ANSWER:  terraform init, terraform apply -auto-aprove, terraform destroy
 ## Submitting the solutions
 
 * Form for submitting: https://courses.datatalks.club/de-zoomcamp-2025/homework/hw1
